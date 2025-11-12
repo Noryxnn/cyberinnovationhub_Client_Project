@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=0.8" />
+    <script src="../static/Loginpage.js"></script>
+    <link rel="stylesheet" type="text/css" href="static/loginpagecss.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='navbarclient.css') }}">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap">
+    <title>Bedtest login</title>
+    
+
+</head>
+
+<body>
+    <header id="hero">
+        <nav class="navbar">
+          <div class="container">
+            <!-- Logo -->
+            <h1 id="logo">
+              <a href="#"
+                ><img src="static/assets/cyperic.png" alt="Your Logo"
+              /></a>
+            </h1>
+            <!-- Navbar links -->
+            <ul class="nav-menu">
+              <li><a class="active nav-link" href="/">Home</a></li>
+                  <li><a class="nav-link" href="catalog">Catalogue</a></li>
+                  <li><a class="nav-link" href="bookingHistory">Bookings</a></li>
+                  <li><a class="nav-link" href="historyPageRender">History</a></li>
+              
+              <li>
+                <a
+                  class="nav-link btn btn-primary"
+                  href="loginPage"
+                  id="loginout"
+                  >LOGIN <i class="fas fa-arrow-right"></i
+                ></a>
+              </li>
+  
+              <!-- Toggle switch -->
+              <div class="theme-switch">
+                <input type="checkbox" id="switch" />
+                <label class="toggle-icons" for="switch">
+                  <img class="moon" src="static/assets/moon.svg" />
+                  <img class="sun" src="static/assets/sun.svg" />
+                </label>
+              </div>
+              <!-- Hamburger menu -->
+            </ul>
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+          </div>
+        </nav>
+    </br></br></br></br></br></br></br></br>
+    <div class="colourBit" id="colourBit">
+        <section>
+            <br>
+            <h1> LOGIN </h1><br>
+            <p>Please enter a username below or create an account now for free!</p>
+
+            <form name="credentialsEnter" onsubmit="return credentialValidation(1)" method="post">
+                <label for="name" style="color: black;">USERNAME:</label><br>
+                <input id="username" type="text" name="username"><br>
+                <label for="name" style="color:black;">PASSWORD:</label><br>
+                <input id="password" type="password" name="password">
+                <input id="showPSW" type="checkbox" onclick="showPassword()">Show password<br>
+                <input type="submit" value="Submit">
+            </form>
+            
+        </section>
+
+    
+    
+    
+    <button class="open-button" onclick="openForm()">Create new account</button>
+    <div class="form-popup" id="myForm">
+        <form name="createAccount" class="form-container" onsubmit="return credentialValidation(2) " method="post">
+            <h1>Create new account</h1>
+            <label for="name" style="color: black;">USERNAME:</label><br>
+            <input id="username2" type="text" name="username"><br>
+            <label for="name" style="color:black;">PASSWORD:</label><br>
+            <input id="password2" type="text" name="password"><br>
+            <label for="name" style="color: black;">EMAIL</label><br>
+            <input id="email" type="email" name="email"><br>
+            <button type="submit" class="btn">Create</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+    </div>
+    <script>
+        const loginout = document.getElementById('loginout');
+        console.log(localStorage.getItem("username"))
+        if (localStorage.getItem("username") !== null && localStorage.getItem("username") !== "null" ){
+            console.log("AHH")
+            loginout.innerText = "LOG OUT"
+            loginout.addEventListener('click', () => {
+                localStorage.setItem("username", null)
+                localStorage.setItem("comeFrom", "/")
+                console.log("gee whizz")
+                alert('Performing custom logout action');
+        })}else{
+            loginout.innerText = "LOG IN"  
+        };
+        </script>
+        <script src="static/script.js"></script>
+</body>
+
+</html>

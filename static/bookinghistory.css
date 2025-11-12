@@ -1,0 +1,121 @@
+.sakhai-leave-management-affected-bookings {
+  background: #FFFFFF;
+  box-shadow: 0vw 0vw 0.26vw rgba(0, 0, 0,0.14);
+  border-radius: 10px;
+  width: 70vw;
+  height: 15vw;
+  padding: 1vw;
+}
+.sakhai-leave-management-affected-bookings .info-row1{
+  display: flex;
+  align-items: center;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2vw;
+  line-height: 1.198vw;
+  color: #4f4f4f;
+  justify-content: space-around;
+  border-style: solid;
+  border-width: 0vw 0vw 0.052 0vw;
+  border-color: #EBEFF2;
+  padding: 0.104vw
+}
+.info-row1 .booking-id
+{
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 2vw;
+line-height: 1.354vw;
+color: #333333;
+border-style: solid;
+border-width: 0vw 0.052vw 0vw 0vw;
+border-color: #EBEFF2;
+padding: 0vw 1.563vw 0vw 0vw;  
+}
+.sakhai-leave-management-affected-bookings .info-row2{
+  display: flex;
+  align-items: center;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.7vw;
+  line-height: 1.198vw;
+  color: #4f4f4f;
+  justify-content: space-around;
+  border-style: solid;
+  border-width: 0vw 0vw 0.052vw 0vw;
+  border-color: #EBEFF2;
+  padding: 0.104vw
+}
+.info-row2 .booking-status
+{
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 1.5vw;
+line-height: 1.354vw;
+color: #219653;
+border-style: solid;
+border-width: 0vw 0vw 0vw 0.052vw;
+border-color: #EBEFF2;
+padding: 0vw 0vw 0vw 1.563vw;
+}
+
+
+.sakhai-leave-management-affected-bookings .info-row3
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.208vw 0vw 0.208vw 0vw;
+}
+.info-row3 .action1
+{
+font-family: Poppins;
+font-style: normal;
+font-weight: 500;
+font-size: 1.5vw;
+line-height: 1.235vw;
+color: #219653;
+}
+.info-row3 .action2
+{
+font-family: Poppins;
+font-style: normal;
+font-weight: 500;
+font-size: 1.5vw;
+line-height: 1.235vw;
+color: #EB5757;
+}
+.info-row3 .action3
+{
+font-family: Poppins;
+font-style: normal;
+font-weight: 500;
+font-size: 1.5vw;
+line-height: 1.235vw;
+color: #109CF1;
+}
+.info-row4
+{
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 1vw;
+line-height: 1.235vw;
+color: #333333;
+border-style: solid;
+border-width: 0vw 0.052vw 0vw 0vw;
+border-color: #EBEFF2;
+padding: 0vw 1.563vw 0vw 0vw;  
+}
+
+.boddy {
+background: url(https://c4.wallpaperflare.com/wallpaper/154/40/943/iphone-x-gradient-wallpaper-preview.jpg) no-repeat;
+background-size: cover;
+background-position: absolute;
+height: calc(100vh - 80px);
+z-index: -1;
+}

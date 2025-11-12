@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS DemoRequests;
+
+
+CREATE TABLE IF NOT EXISTS `DemoRequests` (
+  `bookingID`		INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  `userName`	TEXT NOT NULL,
+  `date`	TEXT NOT NULL,
+  `items`  TEXT NOT NULL
+);
+
+SELECT * FROM DemoRequests;

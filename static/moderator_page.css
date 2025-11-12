@@ -1,0 +1,36 @@
+.mainDiv {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    padding: 10px;
+    background-color: lightgray;
+    border-radius: 20px;
+    grid-template-columns: 30vw 30vw;
+    width: 40vw;
+    height: 20vw;
+    margin: 30px;
+    float: left;
+}
+
+button {
+    border: none;
+    border-radius: 360px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    box-shadow: none;
+}
+
+button:hover {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.accept {
+    background-color: white;
+}
+
+.deny {
+    background-color: transparent;
+    border: 3px solid white;
+}
+body{
+    background: url(https://c4.wallpaperflare.com/wallpaper/154/40/943/iphone-x-gradient-wallpaper-preview.jpg) no-repeat;
+    background-size: cover;
+    }

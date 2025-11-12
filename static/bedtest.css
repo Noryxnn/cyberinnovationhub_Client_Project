@@ -1,0 +1,270 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+/* variables */
+:root {
+  /* Colors */
+  --primary-color: #A020F0;
+  --secondary-color: #A020F0;
+  --bg-primary: #ffffff;
+  --text-color: #222222;
+  --text-color-two: #ffffff;
+  --bg-secondary: #000000;
+  --card-background: #f4f4f4;
+  --bg-secondary-two: #111111;
+
+  --shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+
+  /* Font Weight */
+  --weight-small: 400;
+  --weight-semibold: 600;
+  --weight-bold: 800;
+
+  /* Max width */
+  --width-small: 600px;
+  --width-medium: 1100px;
+  --width-large: 1300px;
+}
+
+[data-theme="dark"] {
+  --primary-color: #A020F0;
+  --secondary-color: #A020F0;
+  --bg-primary: #000000;
+  --text-color: #ffffff;
+  --text-color-two: #222222;
+  --bg-secondary: #ffffff;
+  --card-background: #111111;
+  --bg-secondary-two: #f4f4f4;
+  --shadow: 0 2px 10px rgba(95, 95, 95, 0.2);
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+/* Reset default styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  font-family: "Raleway", sans-serif;
+  line-height: 1.2;
+  zoom:100%;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+  /* section{
+  background: url(https://c4.wallpaperflare.com/wallpaper/154/40/943/iphone-x-gradient-wallpaper-preview.jpg) no-repeat;
+  background-size: cover;
+  height: calc(100vh);
+  width:auto;
+  z-index: -1;
+  position: absolute;
+
+}  */
+
+
+/* div.table {
+    margin: 1vw;
+    border: 0.01vw solid #ccc;
+    float: left;
+    width: 17vw;
+    display: flex;
+    position: relative;
+  z-index: 1;
+  background-color: transparent;
+  
+  }
+  
+  div.table:hover {
+    border: 1vw solid #777;
+    position: relative;
+  z-index: 1;
+  background-color: transparent;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+    position: relative;
+  z-index: 1;
+  background-color: transparent;
+  }
+  
+  div.desc {
+    padding: 1vw;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    background-color: transparent; 
+  } */
+
+  /* div.CurrentTestbeds {
+    display: grid;
+    align-items: center;
+    grid-auto-flow: column;
+    position: relative;
+    z-index: 1;
+    background-color: transparent; 
+  } */
+
+  .sakhai-leave-management-affected-bookings {
+    background: #FFFFFF;
+    box-shadow: 0vw 0vw 0.26vw rgba(0, 0, 0,0.14);
+    border-radius: 10px;
+    width: 70vw;
+    height: 15vw;
+    padding: 1vw;
+  }
+  .sakhai-leave-management-affected-bookings .info-row1{
+    display: flex;
+    align-items: center;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2vw;
+    line-height: 1.198vw;
+    color: #4f4f4f;
+    justify-content: space-around;
+    border-style: solid;
+    border-width: 0vw 0vw 0.052 0vw;
+    border-color: #EBEFF2;
+    padding: 0.104vw
+  }
+  .info-row1 .booking-id
+  {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2vw;
+  line-height: 1.354vw;
+  color: #333333;
+  border-style: solid;
+  border-width: 0vw 0.052vw 0vw 0vw;
+  border-color: #EBEFF2;
+  padding: 0vw 1.563vw 0vw 0vw;  
+  }
+  .sakhai-leave-management-affected-bookings .info-row2{
+    display: flex;
+    align-items: center;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.7vw;
+    line-height: 1.198vw;
+    color: #4f4f4f;
+    justify-content: space-around;
+    border-style: solid;
+    border-width: 0vw 0vw 0.052vw 0vw;
+    border-color: #EBEFF2;
+    padding: 0.104vw
+  }
+  .info-row2 .booking-status
+  {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.5vw;
+  line-height: 1.354vw;
+  color: #219653;
+  border-style: solid;
+  border-width: 0vw 0vw 0vw 0.052vw;
+  border-color: #EBEFF2;
+  padding: 0vw 0vw 0vw 1.563vw;
+  }
+  
+  
+  .sakhai-leave-management-affected-bookings .info-row3
+  {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.208vw 0vw 0.208vw 0vw;
+  }
+  .info-row3 .action1
+  {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5vw;
+  line-height: 1.235vw;
+  color: #219653;
+  }
+  .info-row3 .action2
+  {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5vw;
+  line-height: 1.235vw;
+  color: #EB5757;
+  }
+  .info-row3 .action3
+  {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5vw;
+  line-height: 1.235vw;
+  color: #109CF1;
+  }
+  .info-row4
+  {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1vw;
+  line-height: 1.235vw;
+  color: #333333;
+  border-style: solid;
+  border-width: 0vw 0.052vw 0vw 0vw;
+  border-color: #EBEFF2;
+  padding: 0vw 1.563vw 0vw 0vw;  
+  }
+  
+  .boddy {
+  background: url(https://c4.wallpaperflare.com/wallpaper/154/40/943/iphone-x-gradient-wallpaper-preview.jpg) no-repeat;
+  background-size: cover;
+  background-position: absolute;
+  height: calc(100vh - 80px);
+  z-index: -1;
+  }
+  
+  .fontSize{
+    font-size: 1vw;
+  }
+
+
+  .historybutton{
+    text-align: right;
+  }

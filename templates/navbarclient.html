@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html> 
+    <head> 
+        <meta charset="utf-8">
+        <title>Responsive Navbar</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="static/navbarclient.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        <script src="../static/Loginpage.js" crossorigin="anonymous"></script>
+        
+    </head>
+
+    <body class="boddy"> 
+        <nav class="navbar">
+            <div class="container">
+              <!-- Logo -->
+              <h1 id="logo">
+                <a href="#"
+                  ><img src="static/assets/cyperic.png" alt="Your Logo"
+                /></a>
+              </h1>
+              <!-- Navbar links -->
+              <ul class="nav-menu">
+                <li><a class="active nav-link" href="/">Home</a></li>
+                    <li><a class="nav-link" href="catalog">Catalogue</a></li>
+                    <li><a class="nav-link" href="bookingHistory">Bookings</a></li>
+                    <li><a class="nav-link" href="historyPageRender">History</a></li>
+                    <li><a class="nav-link" href="loginPage" id="loginout">Log in</a></li>
+                
+                <li>
+                  <a
+                    class="nav-link btn btn-primary"
+                    href="#"
+                    >LOGIN <i class="fas fa-arrow-right"></i
+                  ></a>
+                </li>
+    
+                <!-- Toggle switch -->
+                <div class="theme-switch">
+                  <input type="checkbox" id="switch" />
+                  <label class="toggle-icons" for="switch">
+                    <img class="moon" src="static/assets/moon.svg" />
+                    <img class="sun" src="static/assets/sun.svg" />
+                  </label>
+                </div>
+                <!-- Hamburger menu -->
+              </ul>
+              <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+              </div>
+            </div>
+          </nav>
+        <button class="btn" onclick="logout()">LOGOUT</button>
+        <script>
+            const loginout = document.getElementById('loginout');
+            console.log(localStorage.getItem("username"))
+            if (localStorage.getItem("username") !== null && localStorage.getItem("username") !== "null" ){
+                console.log("AHH")
+                loginout.innerText = "LOG OUT"
+                loginout.addEventListener('click', () => {
+                    localStorage.setItem("username", null)
+                    localStorage.setItem("comeFrom", "/")
+                    console.log("gee whizz")
+                    alert('Performing custom logout action');
+            })}else{
+                loginout.innerText = "LOG IN"  
+            };
+            </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+    </html>

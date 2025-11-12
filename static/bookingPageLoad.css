@@ -1,0 +1,103 @@
+/* variables */
+:root {
+    /* Colors */
+    --primary-color: #A020F0;
+    --secondary-color: #A020F0;
+    --bg-primary: #ffffff;
+    --text-color: #222222;
+    --text-color-two: #ffffff;
+    --bg-secondary: #000000;
+    --card-background: #f4f4f4;
+    --bg-secondary-two: #111111;
+  
+    --shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  
+    /* Font Weight */
+    --weight-small: 400;
+    --weight-semibold: 600;
+    --weight-bold: 800;
+  
+    /* Max width */
+    --width-small: 600px;
+    --width-medium: 1100px;
+    --width-large: 1300px;
+  }
+  
+  [data-theme="dark"] {
+    --primary-color: #A020F0;
+    --secondary-color: #A020F0;
+    --bg-primary: #000000;
+    --text-color: #ffffff;
+    --text-color-two: #222222;
+    --bg-secondary: #ffffff;
+    --card-background: #111111;
+    --bg-secondary-two: #f4f4f4;
+    --shadow: 0 2px 10px rgba(95, 95, 95, 0.2);
+  }
+  
+  html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+  }
+  
+  /* Reset default styling */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--text-color);
+  }
+  
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    font-family: "Raleway", sans-serif;
+    line-height: 1.2;
+    zoom:100%;
+  }
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  .btn2 {
+    position: fixed;
+    display: inline-block;
+    padding: 0.75rem 1.9rem;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-size: 0.82rem;
+    transition: 0.3s;
+    width: 50vw;
+    height: 35vw;
+    left: 0%;
+    background-color: rgba(255,255,255,0.8);
+  }
+  .btn3 {
+    position: fixed;
+    display: inline-block;
+    padding: 0.75rem 1.9rem;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-size: 0.82rem;
+    transition: 0.3s;
+    width: 50vw;
+    height: 35vw;
+    right: 0%;
+    background-color: rgba(255,255,255,0.8)
+  }

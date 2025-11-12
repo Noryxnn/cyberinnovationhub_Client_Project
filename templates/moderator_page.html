@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='moderator_page.css') }}">
+        <script src="{{ url_for('static', filename='moderator_page.js') }}"></script>
+        <script src="../static/Loginpage.js" crossorigin="anonymous"></script>
+    </head>
+    <body onload="sendData()">
+
+        <h1>Welcome to the moderator page</h1>
+        <h2>Here you can accept or deny bookings</h2>
+
+        {%for i in range(len)%}
+        <div class="mainDiv">
+            <table>
+                <p>Booking Request</p>
+                <p>{{ itemsList[i] }}</p>
+                <p>
+                    {{ userNameList[i] }}
+                </p>
+                <p>
+                    {{ dateList[i] }}
+                </p>
+                <p>
+                    {{ typeList[i] }}
+                </p>
+                <td>
+                    <button onclick="acceptRequest('{{ idList[i] }}')" class="accept">Accept</button> <!-- Accept will create a test bed -->
+                    <button onclick="denyRequest('{{ idList[i]}}')" class="deny">Deny</button> <!-- Deny will remove entry from DB so lets work on this first -->
+                </td>
+            </table>
+        </div>
+        {%endfor%}
+        <script>
+            const loginout = document.getElementById('loginout');
+            console.log(localStorage.getItem("username"))
+            if (localStorage.getItem("username") !== null && localStorage.getItem("username") !== "null" ){
+                console.log("AHH")
+                loginout.innerText = "LOG OUT"
+                loginout.addEventListener('click', () => {
+                    localStorage.setItem("username", null)
+                    localStorage.setItem("comeFrom", "/")
+                    console.log("gee whizz")
+                    alert('Performing custom logout action');
+            })}else{
+                loginout.innerText = "LOG IN"  
+            };
+            </script>
+    </body>
+</html>

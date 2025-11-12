@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!-- Create a List which will loop through and for each element in the list build a tile around it -->
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,
+user-scalable=no">
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='catalog_page.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='navbarclient.css') }}">
+        <link rel="stylesheet" type="text/css" href="../static/historyPage.css">
+        <link rel="stylesheet" type="text/css" href="../static/loginpagecss.css">
+        <script src="../static/Loginpage.js" crossorigin="anonymous"></script>
+        <script src="../static/catalog_page.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header id="hero">
+            <nav class="navbar">
+              <div class="container">
+                <!-- Logo -->
+                <h1 id="logo">
+                  <a href="#"
+                    ><img src="../static/assets/cyperic.png" alt="Your Logo"
+                  /></a>
+                </h1>
+                <!-- Navbar links -->
+                <ul class="nav-menu">
+                  <li><a class="active nav-link" href="/">Home</a></li>
+                      <li><a class="nav-link" href="catalog">Catalogue</a></li>
+                      <li><a class="nav-link" href="bookingHistory">Bookings</a></li>
+                      <li><a class="nav-link" href="historyPageRender">History</a></li>
+                 
+                  <li>
+                    <a
+                      class="nav-link btn btn-primary"
+                      href="loginPage"
+                      id="loginout"
+                      >LOGIN <i class="fas fa-arrow-right"></i
+                    ></a>
+                  </li>
+       
+                  <!-- Toggle switch -->
+                  <div class="theme-switch">
+                    <input type="checkbox" id="switch" />
+                    <label class="toggle-icons" for="switch">
+                      <img class="moon" src="../static/assets/moon.svg" />
+                      <img class="sun" src="../static/assets/sun.svg" />
+                    </label>
+                  </div>
+                  <!-- Hamburger menu -->
+                </ul>
+                <div class="hamburger">
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                </div>
+              </div>
+            </nav>
+          </br></br></br></br></br></br></br></br>
+        <div class="buttons">
+            <button class="testbed" onclick="sendData('testbed')" id="sendData">Buy Testbed</button>
+            <button class="demo" onclick="sendData('demo')" id="sendData">Book a Demo</button>
+            <input class="date" onclick="getMinDate()" type="date" id="bookingDate" name="bookingDate">
+            <input class="time" type="time" id="bookingTime" name="bookingTime"><br><br>
+        </div>
+
+        <div onmouseover="openBasket()" onmouseleave="clearBasket()" class="basketButton basket">
+          <img class="basket-icon" src="https://cdn-icons-png.flaticon.com/512/263/263142.png">
+            <div id="numberID" class="numberClass">{{ number }}</div>
+
+        </div>
+        
+        <br>
+        <div id="basket" class="basket basketButton">
+        </div>
+
+        <div id="listTiles" class="mainDiv">
+            <div onclick="selectTrainSation()" class="itemDiv">
+                <p id="myText"  class="train">Train Station</p>
+                <img class="trainpic" src="https://static.thenounproject.com/png/733236-200.png">
+            </div>
+            <div onclick="selectTrafficLight()" class="itemDiv">
+                <p id="myText"  class="traffic">Traffic Light</p>
+                <img class="trafficpic" src="https://cdn-icons-png.flaticon.com/512/1254/1254783.png">
+
+            </div>
+            <div onclick="selectPowerPlant()" class="itemDiv">
+                <p id="myText"  class="power">Power Plant</p>
+                <img class="powerpic" src="https://cdn-icons-png.flaticon.com/512/4327/4327396.png">
+
+            </div>
+            <div onclick="selectHospital()" class="itemDiv">
+                <p id="myText"   class="hospital">Hospital</p>
+                <img class="hospitalpic" src="https://cdn-icons-png.flaticon.com/512/3209/3209159.png">
+
+            </div>
+            <div onclick="selectPrison()" class="itemDiv">
+                <p id="myText" class="prison">Prison</p>
+                <img class="prisonpic" src="https://cdn-icons-png.flaticon.com/512/89/89044.png">
+
+            </div>
+            <!-- <div onclick="selectGeneral()" class="itemDiv">
+                <p>General</p>
+            </div> -->
+        </div>
+        <div id="userBasket"></div>
+        <script>
+          const loginout = document.getElementById('loginout');
+          console.log(localStorage.getItem("username"))
+          if (localStorage.getItem("username") !== null && localStorage.getItem("username") !== "null" ){
+              console.log("AHH")
+              loginout.innerText = "LOG OUT"
+              loginout.addEventListener('click', () => {
+                  localStorage.setItem("username", null)
+                  localStorage.setItem("comeFrom", "/")
+                  console.log("gee whizz")
+                  alert('Performing custom logout action');
+          })}else{
+              loginout.innerText = "LOG IN"  
+          };
+          </script>
+        <script src="../static/script.js"></script>
+       
+    </body>
+</html>
